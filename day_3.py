@@ -52,9 +52,9 @@ for group in grouped_knapsacks:
 
 # convert each groups duplicate into its ordinate 
 # ord(a) - ord(z)       ord(A) - ord(Z)
-#   97       122         65       90
-#  -96       -96        -38      -38
-#  = 1       =26        =27      =52
+#   97       122         65       90            ordinate
+#  -96       -96        -38      -38            normalizer
+#  = 1       =26        =27      =52            code as defined
 # if ord(duplicate) is less than 96, its an uppercase character, subtract 38
 # if ord(duplicate) is greater than 96, its lowercase, subtract 96
 array_ordinates = []
