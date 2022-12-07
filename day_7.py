@@ -58,7 +58,6 @@ for index,command in enumerate(raw_data):
         node_pointer = node_pointer.parent
     # find child directory and point to it
     elif command[:4] == "$ cd":
-        print(f"changing to directory {command.split()[2]}")
         for child in node_pointer.children:
             if child.name == "dir " + command.split()[2]:
                 node_pointer = child
@@ -69,7 +68,7 @@ node_pointer.size()
 
 # problem one
 # return sum of all directories with size <= 100000
-print(sum([_ for _ in dir_sizes if _ <= 100000]))
+print(f"problem one: {sum([_ for _ in dir_sizes if _ <= 100000])}")
 
 # problem two
 # find min sized directory to delete in order to meet required_space criteria
@@ -77,4 +76,4 @@ total_system_size = 70000000
 required_space = 30000000
 consumed_space = total_system_size - node_pointer.size  # total system size - root directory size
 min_delete_required = required_space- consumed_space
-print(min([_ for _ in dir_sizes if _ >= min_delete_required]))
+print(f"problem two: {min([_ for _ in dir_sizes if _ >= min_delete_required])}")
