@@ -23,16 +23,16 @@ def signal_check(register, cycle_counter):
 
 # for problem one move signal check below cycle pointer increment
 def noop(register, cycle_counter):
-    signal_check(register, cycle_counter)
     cycle_counter += 1
+    signal_check(register, cycle_counter)
     return register, cycle_counter
 
 # for problem one move signal check below cycle pointer increment
 def add(register, cycle_counter, value):
-    signal_check(register, cycle_counter)
     cycle_counter += 1
     signal_check(register, cycle_counter)
     cycle_counter +=1
+    signal_check(register, cycle_counter)
     register += value
     return register, cycle_counter
 
