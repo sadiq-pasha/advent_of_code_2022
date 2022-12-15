@@ -5,7 +5,7 @@ maze = [[elevation for elevation in row] for row in raw_input_data.split("\n")]
 
 # set problem_two_flag = True for problem two (min path from all starting positions "a")
 # set problem_two_flag = False for problem one (start at maze postion "S")
-problem_two_flag = True
+problem_two_flag = False
 
 # for problem 2 we have to start at all positions "a", [start] is a list of all positions "a" in the matrix
 start = []
